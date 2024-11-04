@@ -1,4 +1,6 @@
-export const bucket = new sst.aws.Bucket("Uploads");
+export const bucket = new sst.aws.Bucket("Uploads", {
+  cors: true,
+});
 
 export const table = new sst.aws.Dynamo("Notes", {
   fields: {
